@@ -5,12 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const getText = document.getElementById("new-task-description")
     const li = document.createElement("li")
     const btn = document.createElement("button")
+    const doneBtn = document.createElement("button")
+    // li.style.listStyleType = "none"
     btn.innerText = "X"
-    btn.style.marginLeft = "50px"
+    doneBtn.innerText = "✅"
+    doneBtn.style.marginLeft = "25px"
+    doneBtn.style.backgroundColor = "green"
+    doneBtn.style.color = "white"
+    doneBtn.style.border = "none"
+    btn.style.marginLeft = "25px"
     btn.style.backgroundColor = "red"
     btn.style.color = "white"
     btn.style.border = "none"
-    li.append(getText.value, btn)
+    li.append(getText.value, btn, doneBtn)
     document.getElementById("tasks").append(li)
   })
 });
